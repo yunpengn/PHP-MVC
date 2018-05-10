@@ -1,6 +1,6 @@
 ## PHP MVC
 
-This is a minimal web MVC framework written in PHP from scratch. It is for demonstration purpose only. It is not efficient, secured or ready for use in production.
+This is a minimal web MVC framework written in PHP from scratch. _It is for demonstration purpose only. It is not efficient, secured or ready for use in production._
 
 ## Licence
 
