@@ -17,7 +17,6 @@ class Controller {
      */
     public function show($page, $data = array()) {
         extract($data);
-        $this->includeNavigation();
         $url = "app/views/" . $page . ".php";
 
         // Checks whether the page exists.
