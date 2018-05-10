@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * The base class for a simple mailer. It is supported by PHPMailer library under the hood.
+ */
 class Mailer {
     /**
      * Standard email function ready for use.
@@ -17,8 +19,8 @@ class Mailer {
 
         // Tell PHPMailer to use SMTP
         $mail->isSMTP();
-        // Enable SMTP debugging (2 => client and server messages)
-        // Notice: change it to 0 in the production environment
+        // Enable/Diable SMTP debugging (2 => client and server messages)
+        // Notice: change it to 0 in the production environment, 2 in the developement environment.
         $mail->SMTPDebug = 0;
         // Ask for HTML-friendly debug output
         $mail->Debugoutput = 'html';
@@ -37,9 +39,9 @@ class Mailer {
         // Password to use for SMTP authentication
         $mail->Password = EMAIL_PASSWORD;
         // Set who the message is to be sent from
-        $mail->setFrom(EMAIL_ADDRESS, 'Peter Finder');
+        $mail->setFrom(EMAIL_ADDRESS, 'PHP MVC');
         // Set an alternative reply-to address
-        $mail->addReplyTo(EMAIL_ADDRESS, 'Peter Finder Admin');
+        $mail->addReplyTo(EMAIL_ADDRESS, 'Website Admin');
         // Set who the message is to be sent to
         $mail->addAddress($to);
 
@@ -56,4 +58,3 @@ class Mailer {
         }
     }
 }
-
