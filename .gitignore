@@ -2,6 +2,10 @@ vendor/
 node_modules/
 npm-debug.log
 
+# Framework configuration files
+config/config.php
+config/httpd.conf
+
 # Laravel 4 specific
 bootstrap/compiled.php
 app/storage/
