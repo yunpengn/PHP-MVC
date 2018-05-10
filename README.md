@@ -2,6 +2,11 @@
 
 This is a minimal web MVC framework written in PHP from scratch. _It is for demonstration purpose only. It is not efficient, secured or ready for use in production._
 
+## Acknowledgments
+
+- Tiny PHP framework [https://github.com/yuansir/tiny-php-framework]
+- Peter Finder [https://github.com/yunpengn/peterfinder]
+
 ## Licence
 
 This repository is under [GNU General Public Licence 3.0](LICENSE).
