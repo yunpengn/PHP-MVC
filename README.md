@@ -9,7 +9,7 @@ This is a minimal web MVC framework written in PHP from scratch. _It is for demo
 	- Mac OS: [https://bitnami.com/stack/mapp/installer](https://bitnami.com/stack/mapp/installer)
 	- Linux: [https://bitnami.com/stack/lapp/installer](https://bitnami.com/stack/lapp/installer)
 - Download and install the latest version of [Composer](https://getcomposer.org/).
-- Clone the repository to your local computer (intp the `apps` folder of your WAPP/MAPP/LAPP installation).
+- Clone the repository to your local computer (into the `apps` folder of your WAPP/MAPP/LAPP installation).
 ```bash
 git clone git@github.com:yunpengn/PHP-MVC.git
 ```
