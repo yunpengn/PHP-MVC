@@ -1,6 +1,6 @@
-## PHP MVC
+## PHP MVC - example
 
-This is a minimal web MVC framework written in PHP from scratch. _It is for demonstration purpose only. It is not efficient, secured or ready for use in production._
+This is a demo example for [PHP MVC](https://github.com/yunpengn/PHP-MVC). For the framework itself, please switch back to the `master` branch.
 
 ## How to Use
 
@@ -9,7 +9,7 @@ This is a minimal web MVC framework written in PHP from scratch. _It is for demo
 	- Mac OS: [https://bitnami.com/stack/mapp/installer](https://bitnami.com/stack/mapp/installer)
 	- Linux: [https://bitnami.com/stack/lapp/installer](https://bitnami.com/stack/lapp/installer)
 - Download and install the latest version of [Composer](https://getcomposer.org/).
-- Clone the repository to your local computer (intp the `apps` folder of your WAPP/MAPP/LAPP installation).
+- Clone the repository to your local computer (into the `apps` folder of your WAPP/MAPP/LAPP installation).
 ```bash
 git clone git@github.com:yunpengn/PHP-MVC.git
 ```
@@ -23,10 +23,6 @@ Include "C:/WAPP/apps/PHP-MVC/config/httpd.conf"
 	- Change the paths in `httpd.conf` to the correct ones according to your WAPP/MAPP/LAPP installation path.
 - Restart your Apache2 server.
 - Open the browser and enter the URL `http://localhost/mvc` (do not use `https`). Now you should see an empty page.
-
-## Sample Project
-
-A simple blog system is available on the `example` branch of this repository. It supports basic user sign up/login/log out. It also supports posting blogs.
 
 ## Acknowledgments
 
