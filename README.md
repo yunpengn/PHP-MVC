@@ -13,6 +13,10 @@ This is a demo example for [PHP MVC](https://github.com/yunpengn/PHP-MVC). For t
 ```bash
 git clone git@github.com:yunpengn/PHP-MVC.git
 ```
+- Install the dependencies as specified in `composer.json`.
+```bash
+composer install
+```
 - Add the following lines to the end of `apache2/conf/bitnami/bitnami-apps-prefix.conf` (the path may be different):
 ```bash
 Include "C:/WAPP/apps/PHP-MVC/config/httpd.conf"
@@ -26,6 +30,14 @@ Include "C:/WAPP/apps/PHP-MVC/config/httpd.conf"
 
 ## Acknowledgments
 
+The following frameworks and/or resources are being used:
+- [Bootstrap](https://getbootstrap.com/)
+- [Bootswatch](https://bootswatch.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [PHP Mailer](https://github.com/PHPMailer/PHPMailer)
+- [jQuery Datatable plugin](https://datatables.net/)
+
+The idea is inspired by the following work:
 - Tiny PHP framework [https://github.com/yuansir/tiny-php-framework]
 - Peter Finder [https://github.com/yunpengn/peterfinder]
 
