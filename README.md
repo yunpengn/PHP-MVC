@@ -24,6 +24,10 @@ Include "C:/WAPP/apps/PHP-MVC/config/httpd.conf"
 - Restart your Apache2 server.
 - Open the browser and enter the URL `http://localhost/mvc` (do not use `https`). Now you should see an empty page.
 
+## Sample Project
+
+A simple blog system is available on the `example` branch of this repository. It supports basic user sign up/login/log out. It also supports posting blogs.
+
 ## Acknowledgments
 
 - Tiny PHP framework [https://github.com/yuansir/tiny-php-framework]
