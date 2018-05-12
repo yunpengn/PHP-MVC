@@ -2,6 +2,9 @@ vendor/
 node_modules/
 npm-debug.log
 
+## PhpStorm project configuration folder
+.idea/
+
 # Framework configuration files
 config/config.php
 config/httpd.conf
