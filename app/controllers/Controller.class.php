@@ -19,6 +19,9 @@ class Controller {
         extract($data);
         $url = "app/views/" . $page . ".php";
 
+        // Includes the navigation bar.
+        $this->includeNavigation();
+
         // Checks whether the page exists.
         if(file_exists($url)){
             require $url;
@@ -27,7 +30,11 @@ class Controller {
         }
     }
 
-    public function hasLogin(): bool {
+    public function includeNavigation() {
+        require "app/views/nav.php";
+    }
+
+    public static function hasLogin(): bool {
         return isset($_SESSION['authorized']) && $_SESSION['authorized'] == true;
     }
 }

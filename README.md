@@ -1,6 +1,6 @@
 ## PHP MVC - example
 
-This is a demo example for [PHP MVC](https://github.com/yunpengn/PHP-MVC). For the framework itself, please switch back to the `master` branch.
+This is a **demo example** for [PHP MVC](https://github.com/yunpengn/PHP-MVC). For the framework itself, please switch back to the `master` branch.
 
 ## How to Use
 
