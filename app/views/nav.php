@@ -14,9 +14,11 @@
             </li>
         </ul>
         <ul class="navbar-nav navbar-right">
+            <?php if (!Controller::hasLogin()) { ?>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo APP_URL; ?>/User/login">Sign in/up</a>
             </li>
+            <?php } ?>
         </ul>
     </div>
 </nav>

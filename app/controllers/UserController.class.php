@@ -28,7 +28,7 @@ class UserController extends Controller {
             $_SESSION['email'] = $result['email'];
             header("Location:" . APP_URL);
         } else {
-        	$data["errorMessage"] = "You have entered an invalid email/email address or password";
+        	$data["errorMessage"] = "You have entered an invalid email address or password.";
             $this->show("User/login", $data);
         }
     }
@@ -48,11 +48,10 @@ class UserController extends Controller {
             return;
         }
 
-        $result = User::signUp($_POST["email"], $_POST["password"]);
-        if ($result) {
+        if (User::signUp($_POST["email"], $_POST["password"])) {
             $_SESSION['authorized'] = true;
             $_SESSION['email'] = $_POST["email"];
-            $this->show("index", $data);
+            header("Location:" . APP_URL);
         } else {
             $data["errorMessage"] = "The email address has been registered by someone else.";
             $this->show("User/signUp", $data);

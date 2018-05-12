@@ -12,7 +12,7 @@ class User {
      * @param string $password to check
      * @return array of the user's information if the validation passes; an empty array otherwise.
      */
-    public static function validateByEmail(string $email, string $password): array {
+    public static function validate(string $email, string $password): array {
         $db = new Database();
         $query = "SELECT * FROM users WHERE email = ?;";
         $result = $db->query($query, array($email));
@@ -40,26 +40,8 @@ class User {
      */
     public static function signUp(string $email, string $password): bool {
         $db = new Database();
-        $query = array();
-        $params = array();
+        $params = array($email, password_hash($password, PASSWORD_BCRYPT));
 
-        // Creates a new row in the user table.
-        array_push($query, "INSERT INTO users(username, password, email) VALUES (?, ?, ?);");
-        array_push($params, array($username, password_hash($password, PASSWORD_BCRYPT), $email));
-
-        // Creates a new owner row in the profile table.
-        if ($type == "owner" || $type == "both") {
-            array_push($query, "INSERT INTO user_profiles(username, type, score) VALUES (?, ?, ?);");
-            array_push($params, array($username, "owner", 0));
-        }
-
-        // Creates a new care taker row in the profile table.
-        if ($type == "peter" || $type == "both") {
-            array_push($query, "INSERT INTO user_profiles(username, type, score) VALUES (?, ?, ?);");
-            array_push($params, array($username, "peter", 0));
-        }
-
-        // Uses a transaction here to ensure atomicity.
-        return $db->transact($query, $params);
+        return $db->insertOrUpdate("INSERT INTO users(email, password) VALUES (?, ?);", $params);
     }
 }
