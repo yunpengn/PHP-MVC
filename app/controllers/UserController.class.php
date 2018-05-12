@@ -13,6 +13,9 @@ class UserController extends Controller {
      * @throws NotFoundException when the page is not found.
      */
     public function login($data = array()) {
+        if (self::hasLogin()) {
+            header("Location:" . APP_URL);
+        }
         if (!isset($_POST["email"]) || !isset($_POST["password"])) {
             $this->show("User/login", $data);
             return;
@@ -36,23 +39,23 @@ class UserController extends Controller {
      * @param array $data is the parameters passed in.
      * @throws NotFoundException when the page is not found.
      */
-    public function signup($data = array()) {
+    public function signUp($data = array()) {
+        if (self::hasLogin()) {
+            header("Location:" . APP_URL);
+        }
         if (!isset($_POST["email"]) || !isset($_POST["password"])) {
             $this->show("User/signup", $data);
             return;
         }
 
-        $result = User::signUp($_POST["email"], $email, $password, $type);
+        $result = User::signUp($_POST["email"], $_POST["password"]);
         if ($result) {
             $_SESSION['authorized'] = true;
-            $_SESSION['email'] = $email;
+            $_SESSION['email'] = $_POST["email"];
             $this->show("index", $data);
         } else {
-            $data["errorMessage"] = "email/email address has registered.";
-            $data["email"] = $email;
-            $data["email"] = $email;
-            $data["type"] = $type;
-            $this->show("User/signup", $data);
+            $data["errorMessage"] = "The email address has been registered by someone else.";
+            $this->show("User/signUp", $data);
         }
     }
 }
