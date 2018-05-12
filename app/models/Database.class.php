@@ -17,7 +17,7 @@ class Database {
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             // Catch the potential exception here for defensive programming practice.
-            die("Cannot connect to the database. ". $e->getMessage() . "<br>");
+            die("Cannot connect to the database. " . $e->getMessage() . "<br>");
         }
     }
 

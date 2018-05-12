@@ -1,4 +1,7 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+
 /**
  * The base class for a simple mailer. It is supported by PHPMailer library under the hood.
  */
@@ -10,7 +13,6 @@ class Mailer {
      * @param $subject
      * @param $body
      * @return bool
-     * @throws phpmailerException
      * @throws Exception
      */
     public static function email($to, $subject, $body) {
