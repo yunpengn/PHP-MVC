@@ -19,14 +19,13 @@ class Controller {
         extract($data);
         $url = "app/views/" . $page . ".php";
 
-        // Includes the navigation bar.
-        $this->includeNavigation();
-
         // Checks whether the page exists.
         if(file_exists($url)){
+            // Includes the navigation bar.
+            $this->includeNavigation();
             require $url;
         } else {
-            throw new NotFoundException("The given view " . $page . "cannot be found.");
+            throw new NotFoundException("The given view " . $page . " cannot be found.");
         }
     }
 
