@@ -11,7 +11,7 @@
  */
 require_once 'core/App.class.php';
 require_once 'config/config.php';
-require_once 'vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 // Utilizes auto-loading here.
 spl_autoload_register(array("App", "myAutoLoader"));
