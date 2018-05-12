@@ -23,7 +23,7 @@ class Controller {
         if(file_exists($url)){
             require $url;
         } else {
-            throw new NotFoundException("The given view " . $page . "cannot be found.");
+            throw new NotFoundException("The given view " . $page . " cannot be found.");
         }
     }
 
