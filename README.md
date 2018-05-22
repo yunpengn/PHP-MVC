@@ -13,11 +13,16 @@ This is a **demo example** for [PHP MVC](https://github.com/yunpengn/PHP-MVC). F
 ```bash
 git clone git@github.com:yunpengn/PHP-MVC.git
 ```
+- Go to the folder of the local repository and switch to `example` branch.
+```bash
+cd PHP-MVC
+git checkout example
+```
 - Install the dependencies as specified in `composer.json`.
 ```bash
 composer install
 ```
-- Add the following lines to the end of `apache2/conf/bitnami/bitnami-apps-prefix.conf` (the path may be different):
+- Add the following lines to the end of `apache2/conf/bitnami/bitnami-apps-prefix.conf` (the path may be different depending on your WAPP/MAPP/LAPP installation):
 ```bash
 Include "C:/WAPP/apps/PHP-MVC/config/httpd.conf"
 ```
@@ -25,6 +30,11 @@ Include "C:/WAPP/apps/PHP-MVC/config/httpd.conf"
 	- Create a copy (do not delete the original ones) for `config.example.php` and `httpd.example.conf` each, and rename them to `config.php` and `httpd.conf` respectively.
 	- Change the values in `config.php` to fit your actual settings.
 	- Change the paths in `httpd.conf` to the correct ones according to your WAPP/MAPP/LAPP installation path.
+- Go to the `scripts` folder and populate the database with sample data<br>
+_(Make sure you have set up the CLI of PostgreSQL properly. If you are a windows user, you may want to refer to [here](https://yunpengn.github.io/peterfinder/docs/psql_setup.html).)_
+	- Windows: `setup.bat`
+	- Mac/Linux: `./setup.sh`
+	- Enter password whenever prompted.
 - Restart your Apache2 server.
 - Open the browser and enter the URL `http://localhost/mvc` (do not use `https`). Now you should see an empty page.
 
